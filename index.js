@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 14;
+if (votingAge >= 18) {
+  console.log('Task 1a','True');
+} if (votingAge < 18){
+  console.log('Task 1a','False');
+}
 
 
 /*
@@ -30,6 +35,14 @@ Do the following:
 
    HINT: no function required
 */
+var x = 4; 
+var y = 6;
+if(x<=y){
+  x=x*y;
+} if (x>y){
+  x=x-y;
+}
+console.log('Task 1b',x);
 
 
 
@@ -45,7 +58,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var NineteenHundredAndNinetyNine = "1999";
+console.log('Task 1c',Number(NineteenHundredAndNinetyNine));
 
 
 
@@ -58,9 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a,b){
+    return(a*b);
+  } 
+  console.log('task 1d',multiply(3,4));
 
 
 
@@ -74,9 +89,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return(age*7);
 }
+console.log('task 2',dogYears(14));
 
 
 
@@ -149,10 +165,36 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+var computer= Math.random();
+  if (computer >=0 && computer < 0.333){
+    computer ='Rock';
+  } else if (computer >=0.333 && computer <0.666){
+    computer = 'Paper';
+  } else if (computer >=0.666 && computer <= 1){
+    computer = 'Scissors';
+  }
 
 function game(user, computer){
-    /*add your code here*/
-}
+  if(computer = 'Rock' && user === 'Rock'){
+    return("it's a tie");
+  } else if(computer === 'Rock' && user === 'Paper'){
+    return('you lose!');
+  } else if(computer === 'Rock' && user === 'Scissors'){
+    return('you win!');
+  } else if(computer === 'Paper' && user === 'Rock'){
+    return('you lose!');
+  } else if(computer === 'Paper' && user === 'Paper'){
+    return("it's a tie");
+  }else if(computer === 'Paper' && user === 'Scissors'){
+    return('you win!');
+  } else if(computer === 'Scissors' && user === 'Rock'){
+    return('you win!');
+  }else if(computer === 'Scissors' && user === 'Paper'){
+    return('you lose!');
+  } else if(computer === 'Scissors' && user === 'Scissors'){
+    return("it's a tie");
+  }
+}console.log('task 4', game('Rock',computer));
   
   
 
@@ -167,9 +209,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilo){
+    return(kilo*0.621371);
   }
+  console.log('task 5a', miles(50));
 
 
 
@@ -181,9 +224,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return(cm*0.0328084);
   }
+  console.log('task 5b', feet(1000));
  
 
 
@@ -197,9 +241,25 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+
+function annoyingSong(starting){    
+  let i= starting;
+  while (i>0){
+    i=i--;
+    if(i>0){
+      return((i+1), 'bottles of soda on the wall,',(i+1),' bottles of soda, take one down pass it around ',(i),' bottles of soda on the wall');
+    }
+    else if(i===0){
+      return((i+1), 'bottle of soda on the wall,',(i+1),' bottle of soda, take it down pass it around ',(i),' bottle of soda on the wall');
+    }
+    
+    
   }
+  
+}
+annoyingSong(99);
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
