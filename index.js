@@ -165,7 +165,7 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-var computer= Math.random();
+let computer= Math.random();
   if (computer >=0 && computer < 0.333){
     computer ='Rock';
   } else if (computer >=0.333 && computer <0.666){
@@ -175,26 +175,33 @@ var computer= Math.random();
   }
 
 function game(user, computer){
-  if(computer = 'Rock' && user === 'Rock'){
+  if(user='Rock'){
+    var choice=1;
+  } else if(user='Paper'){
+    choice=2;
+  }else if(user='Scissors'){
+    choice=3;
+  }
+  if(computer === 'Rock' && choice === 1){
     return("it's a tie");
-  } else if(computer === 'Rock' && user === 'Paper'){
+  } else if(computer === 'Rock' && choice === 2){
     return('you lose!');
-  } else if(computer === 'Rock' && user === 'Scissors'){
+  } else if(computer === 'Rock' && choice === 3){
     return('you win!');
-  } else if(computer === 'Paper' && user === 'Rock'){
+  } else if(computer === 'Paper' && choice === 1){
     return('you lose!');
-  } else if(computer === 'Paper' && user === 'Paper'){
+  } else if(computer === 'Paper' && choice === 2){
     return("it's a tie");
-  }else if(computer === 'Paper' && user === 'Scissors'){
+  }else if(computer === 'Paper' && choice === 3){
     return('you win!');
-  } else if(computer === 'Scissors' && user === 'Rock'){
+  } else if(computer === 'Scissors' && choice === 1){
     return('you win!');
-  }else if(computer === 'Scissors' && user === 'Paper'){
+  }else if(computer === 'Scissors' && choice === 2){
     return('you lose!');
-  } else if(computer === 'Scissors' && user === 'Scissors'){
+  } else if(computer === 'Scissors' && choice === 3){
     return("it's a tie");
   }
-}console.log('task 4', game('Rock',computer));
+}console.log('task 4', game('Scissors',computer));
   
   
 
@@ -225,7 +232,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-    return(cm*0.0328084);
+    return(cm/30.48);
   }
   console.log('task 5b', feet(1000));
  
@@ -247,17 +254,15 @@ function annoyingSong(starting){
   while (i>0){
     i=i--;
     if(i>0){
-      return((i+1), 'bottles of soda on the wall,',(i+1),' bottles of soda, take one down pass it around ',(i),' bottles of soda on the wall');
+      return(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`);
     }
-    else if(i===0){
-      return((i+1), 'bottle of soda on the wall,',(i+1),' bottle of soda, take it down pass it around ',(i),' bottle of soda on the wall');
-    }
-    
     
   }
   
 }
-annoyingSong(99);
+annoyingSong(5);
+
+
 
 
 
